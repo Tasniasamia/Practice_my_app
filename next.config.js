@@ -1,9 +1,18 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-
-    images: {
-        domains: ['agency.teamrabbil.com'],
+  metadata: {
+    metadataBase: process.env.BASE_URL || 'http://localhost:3001',
+  },
+  images: {
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: 'agency.teamrabbil.com',
+        port: '',
+        pathname: '/**',
       },
-}
+    ],
+  },
+};
 
-module.exports = nextConfig
+module.exports = nextConfig;

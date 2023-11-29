@@ -20,21 +20,7 @@ const Contact = () => {
         console.log("after creating object",data);
         const rawResponse = await axios.post('/api/User',data);
           console.log(rawResponse.data);
-        // let res  = axios.post("{{BASE}}/api/CreateContact", data)
-
-        // fetch('/api/User', {
-        //     method: 'POST',
-        //     headers: {
-        //       'Content-Type': 'application/json', // Specify the content type as JSON
-        //     },
-        //     body: JSON.stringify(
-        //     data
-        //     ), // Convert the data to JSON format
-        //   })
-        //     .then((res) => res.json())
-        //     .then((data) => {
-        //       console.log("contact page",data);
-        //     });
+        
     }
     return (
         <div>
